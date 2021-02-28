@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 500px;
+    min-width: 280px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.frame {  
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    /* scroll-behavior: smooth; */
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.navbar {
+    background: rgba(19, 121, 164, 0.50);
+    position: fixed;
+    width: 100%;
+    height: 60px;
+}
+
+.navbar ul {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 15px 5px 0px 5px;
+    color: white;
+    text-align: center;
+}
+
+.navbar ul li h1{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.navbar ul li img {
+    width: 35px;
+    height: 35px;
+}
+
+#importance_intro {
+    /* background-color: #0B4E8A; */
+    background: linear-gradient(180deg, rgba(25, 149, 201, 0.17) 0%, #1995C9 34.38%, #0B4E8A 99.48%);
+}
+
+#ocean_oxygen {
+    background-color: #a9d65f;
+}
