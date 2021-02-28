@@ -68,3 +68,27 @@ section {
 #ocean_oxygen {
     background-color: #a9d65f;
 }
+
+#ocean_marinelife {
+    background: linear-gradient(180deg, rgba(25, 149, 201, 0.17) 0%, #1995C9 34.38%, #0B4E8A 99.48%);
+}
+
+#ocean_food {
+    background-color: #20BEAD;
+}
+
+#ocean_economy {
+    background: linear-gradient(180deg, rgba(25, 149, 201, 0.17) 0%, #1995C9 34.38%, #0B4E8A 99.48%);
+}
+
+#threats_intro {
+    background: linear-gradient(180deg, rgba(25, 149, 201, 0.17) 0%, #1995C9 34.38%, #0B4E8A 99.48%);
+}
+
+#plastic {
+    background: linear-gradient(180deg, rgba(123, 172, 192, 0.79) 0%, #649AB0 41.15%, #486B81 100%);
+}
+
+#overfishing_result {
+    background: linear-gradient(180deg, rgba(123, 172, 192, 0.79) 0%, #649AB0 41.15%, #486B81 100%);
+}
