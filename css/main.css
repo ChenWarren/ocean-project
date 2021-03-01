@@ -60,35 +60,22 @@ section {
     height: 35px;
 }
 
-#importance_intro {
-    /* background-color: #0B4E8A; */
-    background: linear-gradient(180deg, rgba(25, 149, 201, 0.17) 0%, #1995C9 34.38%, #0B4E8A 99.48%);
+.sky_bg_normal {
+    background-color: #94E0F1;;
 }
 
-#ocean_oxygen {
-    background-color: #a9d65f;
+.sky_bg_pollut {
+    background-color: #B4D5DD;
 }
 
-#ocean_marinelife {
-    background: linear-gradient(180deg, rgba(25, 149, 201, 0.17) 0%, #1995C9 34.38%, #0B4E8A 99.48%);
-}
-
-#ocean_food {
+.ocean_bg_food {
     background-color: #20BEAD;
 }
 
-#ocean_economy {
+.ocean_bg_normal {
     background: linear-gradient(180deg, rgba(25, 149, 201, 0.17) 0%, #1995C9 34.38%, #0B4E8A 99.48%);
 }
 
-#threats_intro {
-    background: linear-gradient(180deg, rgba(25, 149, 201, 0.17) 0%, #1995C9 34.38%, #0B4E8A 99.48%);
-}
-
-#plastic {
-    background: linear-gradient(180deg, rgba(123, 172, 192, 0.79) 0%, #649AB0 41.15%, #486B81 100%);
-}
-
-#overfishing_result {
+.ocean_bg_pollut {
     background: linear-gradient(180deg, rgba(123, 172, 192, 0.79) 0%, #649AB0 41.15%, #486B81 100%);
 }
