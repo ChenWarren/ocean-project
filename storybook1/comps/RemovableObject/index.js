@@ -26,7 +26,7 @@ function DelObjectUI(url='https://placekitten.com/200/200', x=0, y=0, dim=100){
 
 DelObjectUI.HandleClick = (el) => {
   el.style.opacity = 0.0;
-  el.style.top = "-50px";
+  el.style.top = "300px";
 }
 
 //export const DelObject = DelObjectUI();
