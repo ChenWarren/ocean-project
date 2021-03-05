@@ -1,4 +1,4 @@
-function ButtonUI(bgcolor="bisque", text="Start", url='https://placekitten.com/200/200'){
+function ButtonUI(bgcolor="aqua", text="Start", url='https://placekitten.com/200/200'){
   return `<div style='
     background-color: ${bgcolor};
     border-radius: 100px;
