@@ -1,4 +1,4 @@
-function category(cat_name, cat_discre)
+function category(cat_name, cat_discre, animateDr)
 {
     return `<div style='
         height: 150px;
@@ -10,6 +10,10 @@ function category(cat_name, cat_discre)
         justify-content: center;
         align-items: center;
         color: #FFF;
+        position: relative;
+        animation-name: ${animateDr};
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
     '>
     <h1 style='
         font-size: 28px;
