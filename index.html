@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Peace Ocean</title>
 </head>
@@ -12,8 +14,6 @@
         <nav class="navbar">
             <ul>
                 <li id="menu"></li>
-                <!-- <li id="webname"></li>
-                <li id="search"></li> -->
             </ul>
         </nav>
 
@@ -22,26 +22,59 @@
         </div>
 
         <div class="ocean_importance">
+
             <section class="center ocean_bg_normal" id="importance_intro"></section>
-            <section class="sky_bg_normal" id="ocean_oxygen"></section>
-            <section class="ocean_bg_normal" id="ocean_marinelife"></section>
-            <section class="ocean_bg_food" id="ocean_food"></section>
-            <section class="ocean_bg_normal" id="ocean_economy"></section>
+
+            <section class="center" id="ocean_oxygen">
+                <div class="sky center sky_bg_normal"></div>
+                <div class="sea_level ocean_bg_level"></div>
+            </section>
+
+            <section class="ocean_bg_normal center" id="ocean_marinelife">
+                <div class="top_div center"></div>
+                <div class="bottom_div"></div>
+            </section>
+
+            <section class="ocean_bg_food center" id="ocean_food">
+                <div class="top_div center"></div>
+                <div class="bottom_div"></div>
+            </section>
+
+            <section class="ocean_bg_normal center" id="ocean_economy">
+                <div class="top_div center"></div>
+                <div class="bottom_div"></div>
+            </section>
+
         </div>
 
         <div class="ocean_threats">
-            <section class="ocean_bg_normal" id="threats_intro"></section>
-            <section class="sky_bg_pollut" id="climate_change"></section>
-            <section class="sky_bg_pollut" id="climate_change_result"></section>
-            <section class="ocean_bg_pollut" id="plastic"></section>
-            <section class="sky_bg_pollut" id="overfishing"></section>
-            <section class="ocean_bg_pollut" id="overfishing_result"></section>
-            <section class="ocean_bg_pollut" id="fewprotectionzone"></section>
+
+            <section class="center ocean_bg_normal" id="threats_intro"></section>
+
+            <section class="center" id="climate_change">
+                <div class="sky center sky_bg_pollut"></div>
+                <div class="sea_level ocean_bg_pollut"></div>
+            </section>
+
+            <section class="ocean_bg_pollut center" id="plastic">
+                <div class="top_div center"></div>
+                <div class="bottom_div"></div>
+            </section>
+
+            <section class="sky_bg_pollut center" id="overfishing">
+                <div class="sky center sky_bg_pollut"></div>
+                <div class="sea_level ocean_bg_pollut"></div>
+            </section>
+
+            <section class="ocean_bg_pollut center" id="few_protect">
+                <div class="top_div center"></div>
+                <div class="bottom_div"></div>
+            </section>
 
         </div>
 
         <div class="ocean_action">
-            <section class="sky_bg_pollut" id="action_intro"></section>
+            <section class="center ocean_bg_pollut" id="action_intro"></section>
             <section class="sky_bg_pollut" id="action_climate"></section>
             <section class="sky_bg_normal" id="action_climate_goal"></section>
             <section class="ocean_bg_pollut" id="action_plastic"></section>
@@ -56,8 +89,8 @@
 
 
     </main>
-    <script src="./js/animate.js"></script>
 
+    <script src="./js/animate.js"></script>
     <script src="./comps/category/index.js"></script>
     <script src="./comps/menu/index.js"></script>
     <script src="./comps/webname/index.js"></script>

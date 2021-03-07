@@ -1,4 +1,4 @@
-function category(cat_name, cat_discre, animateDr)
+function category(cat_name, cat_discre, animateDr, hrefLink)
 {
     return `<div style='
         height: 150px;
@@ -15,10 +15,11 @@ function category(cat_name, cat_discre, animateDr)
         animation-duration: 1s;
         animation-fill-mode: forwards;
     '>
+    <a href = ${hrefLink}>
     <h1 style='
         font-size: 28px;
         text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    '>${cat_name}</h1>
+    '>${cat_name}</h1></a>
     <p>${cat_discre}</p>
     </div>
     `
