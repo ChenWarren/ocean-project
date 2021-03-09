@@ -1,6 +1,30 @@
 document.querySelector('#menu').innerHTML += Menu();
 
 
+// Hiden Menu page and expanding function
+
+let menuClick = document.querySelector('#menu')
+let menuExpan = document.querySelector('#menu_expan')
+
+menuClick.onclick = function()
+{
+    menuExpan.innerHTML += category('Home', '','', '#landingPg');
+    menuExpan.innerHTML += category('Importance', '','', '#importance_intro');
+    menuExpan.innerHTML += category('Threats', '','','#threats_intro');
+    menuExpan.innerHTML += category('Protection', '','','#action_intro');
+
+    menuExpan.style.left = '0px';
+
+}
+
+menuExpan.onclick = function()
+{
+    menuExpan.style.left = '-100%';
+    menuExpan.innerHTML = '';
+}
+
+
+
 // landing page loading function
 
 let target_landing = document.querySelector('#landingPg');
