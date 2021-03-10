@@ -1,7 +1,7 @@
 function category(cat_name, cat_discre, animateDr, hrefLink)
 {
     return `<div style='
-        height: 80px;
+        height: 120px;
         width: 100%;
         background: rgba(255, 255, 255, 0.2);
         margin-top: 10px;
