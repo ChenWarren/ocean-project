@@ -8,10 +8,12 @@ let menuExpan = document.querySelector('#menu_expan')
 
 menuClick.onclick = function()
 {
-    menuExpan.innerHTML += category('Home', '','', '#landingPg');
-    menuExpan.innerHTML += category('Importance', '','', '#importance_intro');
-    menuExpan.innerHTML += category('Threats', '','','#threats_intro');
-    menuExpan.innerHTML += category('Protection', '','','#action_intro');
+    menuExpan.innerHTML += webName('PeaceOcean', '', '');
+
+    menuExpan.innerHTML += menubar('Home', '#landingPg');
+    menuExpan.innerHTML += menubar('Importance', '#importance_intro');
+    menuExpan.innerHTML += menubar('Threats', '#threats_intro');
+    menuExpan.innerHTML += menubar('Protection', '#action_intro');
 
     menuExpan.style.left = '0px';
 
@@ -33,7 +35,7 @@ let callbackLanding = function(entryLanding)
 {
     if(entryLanding[0].intersectionRatio > 0.4 )
     {
-        document.querySelector('.landing').innerHTML += webName('PeaceOcean');
+        document.querySelector('.landing').innerHTML += webName('PeaceOcean', 'topIn', '1.5s');
         
         document.querySelector('.landing').innerHTML += category('Importance', 'Ocean is so important to us','rightIn', '#importance_intro');
         document.querySelector('.landing').innerHTML += category('Threats', 'to the oceans','leftIn','#threats_intro');
