@@ -13,7 +13,7 @@ function introTitle(imgSrc, title,intro_discre,h1Dur,paraDur)
         align-items: center;
     '>
     <img style='
-        margin-bottom: 20px;
+        margin: 0 10px 20px 10px;
     ' src=${imgSrc}>  
     <h1 style='
         text-align: center;

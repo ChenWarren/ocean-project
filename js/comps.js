@@ -59,6 +59,8 @@ menuExpan.onclick = function()
 
 let target_landing = document.querySelector('#landingPg');
 
+target_landing.style.cssText = "background-image: url('./imgs/ocean_background_2.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
 let callbackLanding = function(entryLanding)
 { 
     if(entryLanding[0].intersectionRatio > 0.4 )
@@ -125,7 +127,7 @@ let callbackOxy = function(entryOxy)
 
         target_oxygen.getElementsByClassName('sky')[0]. innerHTML = introTitle('','>50% Oxygen','We breath is from the ocean','1.5s','1s');
 
-        target_oxygen.getElementsByClassName('sea_level')[0]. innerHTML = introTitle('./imgs/plankton.svg','Phytoplankton','living in the oceans produce more than 50% of the oxygen','800ms','800ms');
+        target_oxygen.getElementsByClassName('sea_level')[0]. innerHTML = introTitle('./imgs/phytoplankton.svg','Phytoplankton','living in the oceans produce more than 50% of the oxygen','800ms','800ms');
 
     }
     else
@@ -145,6 +147,8 @@ observerOxy.observe(target_oxygen);
 
 let target_marine = document.querySelector('#ocean_marinelife');
 
+target_marine.style.cssText = "background-image: url('./imgs/ocean_background_3.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
 let callbackMarine = function(entryMarine)
 { 
     if(entryMarine[0].intersectionRatio > 0.4 )
@@ -152,7 +156,7 @@ let callbackMarine = function(entryMarine)
 
         target_marine.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Home','of abundance of marine life','1.5s','1s');
 
-        target_marine.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/imagehere.svg','91%','of species in the ocean still await description','800ms','800ms');
+        target_marine.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('','91%','of species in the ocean still await description','800ms','800ms');
 
     }
     else
@@ -180,7 +184,7 @@ let callbackFood = function(entryFood)
 
         target_food.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Food','','1.5s','1s');
 
-        target_food.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/imagehere.svg','16%','of all animal protein consumed globally','800ms','800ms');
+        target_food.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/sushi.svg','16%','of all animal protein consumed globally','800ms','800ms');
 
     }
     else
@@ -208,7 +212,7 @@ let callbackEconomy = function(entryEconomy)
 
         target_economy.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Economy','','1.5s','1s');
 
-        target_economy.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/imagehere.svg','','Over three billion people depend on maringe and coastal biodiversity for their livelihoods','800ms','800ms');
+        target_economy.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/shipyard.svg','','Over three billion people depend on maringe and coastal biodiversity for their livelihoods','800ms','800ms');
 
     }
     else
@@ -264,7 +268,7 @@ let callbackClimate = function(entryClimate)
 
         target_climate.getElementsByClassName('sky')[0]. innerHTML = introTitle('','Climate Change','impact Ocean temperature and acidity','1.5s','1s');
 
-        target_climate.getElementsByClassName('sea_level')[0]. innerHTML = introTitle('./imgs/plankton_less.svg','Warmer & Acidity','make sealifes living hard','800ms','800ms');
+        target_climate.getElementsByClassName('sea_level')[0]. innerHTML = introTitle('./imgs/phytoplankton_less.svg','Warmer & Acidity','make sealifes living hard','800ms','800ms');
 
     }
     else
@@ -285,6 +289,8 @@ observerClimate.observe(target_climate);
 
 let target_plastic = document.querySelector('#plastic');
 
+target_plastic.style.cssText = "background-image: url('./imgs/plastic-01.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
 let callbackPlastic = function(entryPlastic)
 { 
     if(entryPlastic[0].intersectionRatio > 0.4 )
@@ -292,7 +298,7 @@ let callbackPlastic = function(entryPlastic)
 
         target_plastic.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Five Trillion','pieces of plastic pollution are aloat in the oceans','1.5s','1s');
 
-        target_plastic.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/imagehere.svg','Plastic','has been found in the ocean as deep as 11km','800ms','800ms');
+        target_plastic.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('','Plastic','has been found in the ocean as deep as 11km','800ms','800ms');
 
     }
     else
@@ -313,20 +319,22 @@ observerPlastic.observe(target_plastic);
 
 let target_overfishing = document.querySelector('#overfishing');
 
+target_overfishing.style.cssText = "background-image: url('./imgs/overfishing-01.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
 let callbackOverfishing = function(entryOverfishing)
 { 
     if(entryOverfishing[0].intersectionRatio > 0.4 )
     {
 
-        target_overfishing.getElementsByClassName('sky')[0]. innerHTML = introTitle('','Overfishing','','1.5s','1s');
+        target_overfishing.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Overfishing','','1.5s','1s');
 
-        target_overfishing.getElementsByClassName('sea_level')[0]. innerHTML = introTitle('./imgs/imagehere.svg','1/3','of global fish stocks are overfished','800ms','800ms');
+        target_overfishing.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('','1/3','of global fish stocks are overfished','800ms','800ms');
 
     }
     else
     {
-        target_overfishing.getElementsByClassName('sky')[0].innerHTML = '';
-        target_overfishing.getElementsByClassName('sea_level')[0]. innerHTML = '';
+        target_overfishing.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_overfishing.getElementsByClassName('bottom_div')[0]. innerHTML = '';
     }
 };
 
@@ -348,7 +356,7 @@ let callbackFewProtect = function(entryFewProtect)
 
         target_few_protect.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Only 2%','of global oceans are included in strongly protected marine parks','1.5s','1s');
 
-        target_few_protect.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/imagehere.svg','MPA','Marine Protected Areas(MPA) are areas of ocean set aside for long-term conservation aims','800ms','800ms');
+        target_few_protect.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/mpa.svg','MPA','Marine Protected Areas(MPA) are areas of ocean set aside for long-term conservation aims','800ms','800ms');
 
     }
     else
