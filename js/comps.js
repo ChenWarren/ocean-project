@@ -398,3 +398,34 @@ let observerAction = new IntersectionObserver(callbackAction,{
 });
 
 observerAction.observe(target_action);
+
+
+// Fishing goal page loading function
+
+let target_action_regulate_fishing = document.querySelector('#action_regulate_fishing');
+
+let callbackActionRegulateFishing = function(entryActionRegulateFishing)
+{ 
+    if(entryActionRegulateFishing[0].intersectionRatio > 0.4 )
+    {
+
+        target_action_regulate_fishing.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Regulate fishing','','1.5s','1s');
+
+        target_action_regulate_fishing.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/fishing_boat.svg','How to:','Using some regulatory measures such as: Time, Size, Space, Gear ','800ms','800ms');
+
+    }
+    else
+    {
+        target_action_regulate_fishingt.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_action_regulate_fishing.getElementsByClassName('bottom_div')[0]. innerHTML = '';
+    }
+};
+
+let observerActionRegulateFishing = new IntersectionObserver(callbackActionRegulateFishing,{
+    threshold: 0.4
+});
+
+observerActionRegulateFishing.observe(target_action_regulate_fishing);
+
+
+
