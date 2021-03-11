@@ -24,7 +24,6 @@ body {
     overflow-y: scroll;
     /* scroll-behavior: smooth; */
     /* scroll-snap-type: y; */
-    scro
 }
 
 .landing {
@@ -40,8 +39,8 @@ body {
     position: absolute;
     top: 0px;
     left: -100%;
-    width: 100%;
-    height: 100vh;
+    width: 280px;
+    height: 50vh;
     background-color: rgba(11, 78, 138, 0.95);
     z-index: 2;
 }
@@ -105,7 +104,6 @@ section {
 }
 
 
-
 .sky_bg_normal {
     background-color: #94E0F1;
 }
@@ -126,15 +124,10 @@ section {
     background: linear-gradient(180deg, rgba(25, 149, 201, 0.17) 0%, #1995C9 34.38%, #0B4E8A 99.48%);
 }
 
-/* .ocean_imp_bg {
-    background-image: url('../imgs/ocean_background.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-} */
 
 .ocean_bg_pollut {
     background: linear-gradient(180deg, rgba(123, 172, 192, 0.79) 0%, #649AB0 41.15%, #486B81 100%);
+    
 }
 
 @keyframes leftIn {

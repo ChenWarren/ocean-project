@@ -14,6 +14,7 @@ menuClick.onclick = function()
     menuExpan.innerHTML += menubar('Importance', '#importance_intro');
     menuExpan.innerHTML += menubar('Threats', '#threats_intro');
     menuExpan.innerHTML += menubar('Protection', '#action_intro');
+    menuExpan.innerHTML += windowClose();
 
     menuExpan.style.left = '0px';
 
@@ -28,34 +29,6 @@ menuExpan.onclick = function()
 
 
 // landing page loading function
-
-// let target_landing = document.querySelector('#landingPg');
-
-// let callbackLanding = function(entryLanding)
-// {
-    
-
-//     if(entryLanding[0].intersectionRatio > 0.4 )
-//     {
-//         document.querySelector('.landing').innerHTML += webName('PeaceOcean', 'topIn', '1.5s');
-        
-//         document.querySelector('.landing').innerHTML += category('Importance', 'Ocean is so important to us','rightIn', '#importance_intro');
-//         document.querySelector('.landing').innerHTML += category('Threats', 'to the oceans','leftIn','#threats_intro');
-//         document.querySelector('.landing').innerHTML += category('Protection', 'The things that we can do','rightIn','#action_intro');
-//     }
-//     else
-//     {
-//         document.querySelector('.landing').innerHTML = '';
-//     }
-
-// }
-
-// let observerLanding = new IntersectionObserver(callbackLanding,{
-//     threshold: 0.4
-// });
-
-// observerLanding.observe(target_landing)
-
 
 let target_landing = document.querySelector('#landingPg');
 
@@ -72,7 +45,7 @@ let callbackLanding = function(entryLanding)
 
         target_landing.getElementsByClassName('bottom_div')[0]. innerHTML += category('Threats', 'to the oceans','leftIn','#threats_intro');
 
-        target_landing.getElementsByClassName('bottom_div')[0]. innerHTML += category('Protection', 'The things that we can do','rightIn','#action_intro');
+        target_landing.getElementsByClassName('bottom_div')[0]. innerHTML += category('Protection', 'Things we can do to save the ocean','rightIn','#action_intro');
 
     }
     else
@@ -125,7 +98,7 @@ let callbackOxy = function(entryOxy)
     if(entryOxy[0].intersectionRatio > 0.4 )
     {
 
-        target_oxygen.getElementsByClassName('sky')[0]. innerHTML = introTitle('','>50% Oxygen','We breath is from the ocean','1.5s','1s');
+        target_oxygen.getElementsByClassName('sky')[0]. innerHTML = introTitle('','> 50% of the Oxygen','that we breath is generated from the ocean','1.5s','1s');
 
         target_oxygen.getElementsByClassName('sea_level')[0]. innerHTML = introTitle('./imgs/phytoplankton.svg','Phytoplankton','living in the oceans produce more than 50% of the oxygen','800ms','800ms');
 
@@ -184,7 +157,7 @@ let callbackFood = function(entryFood)
 
         target_food.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Food','','1.5s','1s');
 
-        target_food.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/sushi.svg','16%','of all animal protein consumed globally','800ms','800ms');
+        target_food.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/sushi.svg','16%','of all animal protein consumed globally is from the ocean','800ms','800ms');
 
     }
     else
@@ -212,7 +185,7 @@ let callbackEconomy = function(entryEconomy)
 
         target_economy.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Economy','','1.5s','1s');
 
-        target_economy.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/shipyard.svg','','Over three billion people depend on maringe and coastal biodiversity for their livelihoods','800ms','800ms');
+        target_economy.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/shipyard.svg','','Over three billion people depend on marine and coastal biodiversity for their livelihoods','800ms','800ms');
 
     }
     else
@@ -241,7 +214,7 @@ let callbackThreats = function(entyThreats)
     if(entyThreats[0].intersectionRatio > 0.4 )
     {
 
-        target_threats.innerHTML = introTitle('','Threats','to the Oceans','1s','1s');
+        target_threats.innerHTML = introTitle('','Threats','to the Ocean','1s','1s');
 
     }
     else
@@ -266,9 +239,9 @@ let callbackClimate = function(entryClimate)
     if(entryClimate[0].intersectionRatio > 0.4 )
     {
 
-        target_climate.getElementsByClassName('sky')[0]. innerHTML = introTitle('','Climate Change','impact Ocean temperature and acidity','1.5s','1s');
+        target_climate.getElementsByClassName('sky')[0]. innerHTML = introTitle('','Climate Change','impacts ocean temperature and acidity','1.5s','1s');
 
-        target_climate.getElementsByClassName('sea_level')[0]. innerHTML = introTitle('./imgs/phytoplankton_less.svg','Warmer & Acidity','make sealifes living hard','800ms','800ms');
+        target_climate.getElementsByClassName('sea_level')[0]. innerHTML = introTitle('./imgs/phytoplankton_less.svg','Warmer & Acidity','Higher temperature and acidity make marine life harder','800ms','800ms');
 
     }
     else
@@ -296,7 +269,7 @@ let callbackPlastic = function(entryPlastic)
     if(entryPlastic[0].intersectionRatio > 0.4 )
     {
 
-        target_plastic.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Five Trillion','pieces of plastic pollution are aloat in the oceans','1.5s','1s');
+        target_plastic.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Five Trillion','pieces of plastic pollution are afloat in the oceans','1.5s','1s');
 
         target_plastic.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('','Plastic','has been found in the ocean as deep as 11km','800ms','800ms');
 
@@ -384,7 +357,7 @@ let callbackAction = function(entyAction)
     if(entyAction[0].intersectionRatio > 0.4 )
     {
 
-        target_action.innerHTML = introTitle('','Protection','The things that we can do to make a change','1s','1s');
+        target_action.innerHTML = introTitle('','Protection','Things we can do to save the ocean','1s','1s');
 
     }
     else
