@@ -416,7 +416,7 @@ let callbackActionRegulateFishing = function(entryActionRegulateFishing)
     }
     else
     {
-        target_action_regulate_fishingt.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_action_regulate_fishing.getElementsByClassName('top_div')[0].innerHTML = '';
         target_action_regulate_fishing.getElementsByClassName('bottom_div')[0]. innerHTML = '';
     }
 };
@@ -426,6 +426,38 @@ let observerActionRegulateFishing = new IntersectionObserver(callbackActionRegul
 });
 
 observerActionRegulateFishing.observe(target_action_regulate_fishing);
+
+// Sustainable fishing page loading function
+
+// Few protection zone page loading function
+
+let target_sustainable_fishing = document.querySelector('#action_fishing_goal');
+
+let callbackSustainableFishing = function(entrySustainableFishing)
+{ 
+    if(entrySustainableFishing[0].intersectionRatio > 0.4 )
+    {
+
+        target_sustainable_fishing.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Sustainable fishing','','1.5s','1s');
+
+        target_sustainable_fishing.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/fishing_boat2.svg','Less boats, More fish','','800ms','800ms');
+
+    }
+    else
+    {
+        target_sustainable_fishingt.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_sustainable_fishing.getElementsByClassName('bottom_div')[0]. innerHTML = '';
+    }
+};
+
+let observerSustainableFishing = new IntersectionObserver(callbackSustainableFishing,{
+    threshold: 0.4
+});
+
+observerSustainableFishing.observe(target_sustainable_fishing);
+
+
+
 
 
 
