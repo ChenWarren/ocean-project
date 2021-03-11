@@ -8,7 +8,7 @@ let menuExpan = document.querySelector('#menu_expan')
 
 menuClick.onclick = function()
 {
-    menuExpan.innerHTML += webName('PeaceOcean', '', '');
+    menuExpan.innerHTML += webName('Edu-Ocean', '', '');
 
     menuExpan.innerHTML += menubar('Home', '#landingPg');
     menuExpan.innerHTML += menubar('Importance', '#importance_intro');
@@ -29,36 +29,70 @@ menuExpan.onclick = function()
 
 // landing page loading function
 
+// let target_landing = document.querySelector('#landingPg');
+
+// let callbackLanding = function(entryLanding)
+// {
+    
+
+//     if(entryLanding[0].intersectionRatio > 0.4 )
+//     {
+//         document.querySelector('.landing').innerHTML += webName('PeaceOcean', 'topIn', '1.5s');
+        
+//         document.querySelector('.landing').innerHTML += category('Importance', 'Ocean is so important to us','rightIn', '#importance_intro');
+//         document.querySelector('.landing').innerHTML += category('Threats', 'to the oceans','leftIn','#threats_intro');
+//         document.querySelector('.landing').innerHTML += category('Protection', 'The things that we can do','rightIn','#action_intro');
+//     }
+//     else
+//     {
+//         document.querySelector('.landing').innerHTML = '';
+//     }
+
+// }
+
+// let observerLanding = new IntersectionObserver(callbackLanding,{
+//     threshold: 0.4
+// });
+
+// observerLanding.observe(target_landing)
+
+
 let target_landing = document.querySelector('#landingPg');
 
 let callbackLanding = function(entryLanding)
-{
+{ 
     if(entryLanding[0].intersectionRatio > 0.4 )
     {
-        document.querySelector('.landing').innerHTML += webName('PeaceOcean', 'topIn', '1.5s');
-        
-        document.querySelector('.landing').innerHTML += category('Importance', 'Ocean is so important to us','rightIn', '#importance_intro');
-        document.querySelector('.landing').innerHTML += category('Threats', 'to the oceans','leftIn','#threats_intro');
-        document.querySelector('.landing').innerHTML += category('Protection', 'The things that we can do','rightIn','#action_intro');
+
+        target_landing.getElementsByClassName('top_div')[0]. innerHTML = webName('Edu-Ocean','topIn','1.5s')
+
+        target_landing.getElementsByClassName('bottom_div')[0]. innerHTML += category('Importance', 'Ocean is so important to us','rightIn', '#importance_intro');
+
+        target_landing.getElementsByClassName('bottom_div')[0]. innerHTML += category('Threats', 'to the oceans','leftIn','#threats_intro');
+
+        target_landing.getElementsByClassName('bottom_div')[0]. innerHTML += category('Protection', 'The things that we can do','rightIn','#action_intro');
+
     }
     else
     {
-        document.querySelector('.landing').innerHTML = '';
+        target_landing.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_landing.getElementsByClassName('bottom_div')[0]. innerHTML = '';
     }
-
-}
+};
 
 let observerLanding = new IntersectionObserver(callbackLanding,{
     threshold: 0.4
 });
 
-observerLanding.observe(target_landing)
+observerLanding.observe(target_landing);
 
 
 
 // Importance introduction page loading function
 
 let target_importance = document.querySelector('#importance_intro');
+
+target_importance.style.cssText = "background-image: url('./imgs/ocean_background.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
 
 let callbackImpor = function(entryImpor)
 { 
@@ -194,6 +228,9 @@ observerEconomy.observe(target_economy);
 // Threats introduction page loading function
 
 let target_threats = document.querySelector('#threats_intro');
+
+
+target_threats.style.cssText = "background-image: url('./imgs/ocean_background.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
 
 let callbackThreats = function(entyThreats)
 { 
@@ -331,6 +368,8 @@ observerFewProtect.observe(target_few_protect);
 // Protection introduction page loading function
 
 let target_action = document.querySelector('#action_intro');
+
+target_action.style.cssText = "background-image: url('./imgs/ocean_background.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
 
 let callbackAction = function(entyAction)
 { 
