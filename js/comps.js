@@ -14,6 +14,7 @@ menuClick.onclick = function()
     menuExpan.innerHTML += menubar('Importance', '#importance_intro');
     menuExpan.innerHTML += menubar('Threats', '#threats_intro');
     menuExpan.innerHTML += menubar('Protection', '#action_intro');
+
     menuExpan.innerHTML += windowClose();
 
     menuExpan.style.left = '0px';
@@ -41,11 +42,13 @@ let callbackLanding = function(entryLanding)
 
         target_landing.getElementsByClassName('top_div')[0]. innerHTML = webName('Edu-Ocean','topIn','1.5s')
 
+
         target_landing.getElementsByClassName('bottom_div')[0]. innerHTML += category('Importance', 'Ocean is so important to us','rightIn', '#importance_intro');
 
         target_landing.getElementsByClassName('bottom_div')[0]. innerHTML += category('Threats', 'to the oceans','leftIn','#threats_intro');
 
         target_landing.getElementsByClassName('bottom_div')[0]. innerHTML += category('Protection', 'Things we can do to save the ocean','rightIn','#action_intro');
+
 
     }
     else
@@ -73,6 +76,7 @@ let callbackImpor = function(entryImpor)
 { 
     if(entryImpor[0].intersectionRatio > 0.4 )
     {
+
 
         target_importance.innerHTML = introTitle('','Importance','Ocean is so important to us','1s','1s');
 
@@ -214,7 +218,9 @@ let callbackThreats = function(entyThreats)
     if(entyThreats[0].intersectionRatio > 0.4 )
     {
 
+
         target_threats.innerHTML = introTitle('','Threats','to the Ocean','1s','1s');
+
 
     }
     else
@@ -241,7 +247,9 @@ let callbackClimate = function(entryClimate)
 
         target_climate.getElementsByClassName('sky')[0]. innerHTML = introTitle('','Climate Change','impacts ocean temperature and acidity','1.5s','1s');
 
+
         target_climate.getElementsByClassName('sea_level')[0]. innerHTML = introTitle('./imgs/phytoplankton_less.svg','Warmer & Acidity','Higher temperature and acidity make marine life harder','800ms','800ms');
+
 
     }
     else
@@ -272,6 +280,7 @@ let callbackPlastic = function(entryPlastic)
         target_plastic.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Five Trillion','pieces of plastic pollution are afloat in the oceans','1.5s','1s');
 
         target_plastic.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('','Plastic','has been found in the ocean as deep as 11km','800ms','800ms');
+
 
     }
     else
@@ -329,6 +338,7 @@ let callbackFewProtect = function(entryFewProtect)
 
         target_few_protect.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Only 2%','of global oceans are included in strongly protected marine parks','1.5s','1s');
 
+
         target_few_protect.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/mpa.svg','MPA','Marine Protected Areas(MPA) are areas of ocean set aside for long-term conservation aims','800ms','800ms');
 
     }
@@ -359,6 +369,7 @@ let callbackAction = function(entyAction)
 
         target_action.innerHTML = introTitle('','Protection','Things we can do to save the ocean','1s','1s');
 
+
     }
     else
     {
@@ -371,3 +382,261 @@ let observerAction = new IntersectionObserver(callbackAction,{
 });
 
 observerAction.observe(target_action);
+
+
+
+// Deal with climate change page loading function
+
+let target_action_climate = document.querySelector('#action_climate');
+
+let callbackActionClimate = function(entryActionClimate)
+{ 
+    if(entryActionClimate[0].intersectionRatio > 0.4 )
+    {
+
+        target_action_climate.getElementsByClassName('sky')[0]. innerHTML = introTitle('','Mitigate Climate Change','','1.5s','1s');
+
+        target_action_climate.getElementsByClassName('sea_level')[0]. innerHTML = introTitle('./imgs/phytoplankton_less.svg','Reduce Greenhouse Gases','Be aware of your carbon footprint, reduce it where you can','800ms','800ms');
+
+    }
+    else
+    {
+        target_action_climate.getElementsByClassName('sky')[0].innerHTML = '';
+        target_action_climate.getElementsByClassName('sea_level')[0]. innerHTML = '';
+    }
+};
+
+let observerActionClimate = new IntersectionObserver(callbackActionClimate,{
+    threshold: 0.4
+});
+
+observerActionClimate.observe(target_action_climate);
+
+
+
+// Climate change goal page loading function
+
+
+let target_climate_goal = document.querySelector('#action_climate_goal');
+
+let callbackClimateGoal = function(entryClimateGoal)
+{ 
+    if(entryClimateGoal[0].intersectionRatio > 0.4 )
+    {
+
+        target_climate_goal.getElementsByClassName('sky')[0]. innerHTML = introTitle('','Protect the Atmosphere','by reducing pollution, and we\'ll','1.5s','1s');
+
+        target_climate_goal.getElementsByClassName('sea_level')[0]. innerHTML = introTitle('./imgs/phytoplankton.svg','Protect the Ocean','making it habitable for the phytoplankton and other organisms','800ms','800ms');
+
+    }
+    else
+    {
+        target_climate_goal.getElementsByClassName('sky')[0].innerHTML = '';
+        target_climate_goal.getElementsByClassName('sea_level')[0]. innerHTML = '';
+    }
+};
+
+let observerClimateGoal = new IntersectionObserver(callbackClimateGoal,{
+    threshold: 0.4
+});
+
+observerClimateGoal.observe(target_climate_goal);
+
+
+// Control plastic page loading function
+
+let target_action_plastic = document.querySelector('#action_plastic');
+
+target_action_plastic.style.cssText = "background-image: url('./imgs/plastic-01.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
+let callbackActionPlastic = function(entryActionPlastic)
+{ 
+    if(entryActionPlastic[0].intersectionRatio > 0.4 )
+    {
+
+        target_action_plastic.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Reduce Plastic Use','Clean up what is already in the ocean and support the use of more eco-friendly products','1.5s','1s');
+
+    }
+    else
+    {
+        target_action_plastic.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_action_plastic.getElementsByClassName('bottom_div')[0]. innerHTML = '';
+    }
+};
+
+let observerActionPlastic = new IntersectionObserver(callbackActionPlastic,{
+    threshold: 0.4
+});
+
+observerActionPlastic.observe(target_action_plastic);
+
+
+// Control plastic goal page loading function
+
+let target_plastic_goal = document.querySelector('#action_plastic_goal');
+
+target_plastic_goal.style.cssText = "background-image: url('./imgs/ocean_background_3.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
+let callbackPlasticGoal = function(entryPlasticGoal)
+{ 
+    if(entryPlasticGoal[0].intersectionRatio > 0.4 )
+    {
+
+        target_plastic_goal.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Clean the Ocean','and make it safe for ocean creatures to live','1.5s','1s');
+
+    }
+    else
+    {
+        target_plastic_goal.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_plastic_goal.getElementsByClassName('bottom_div')[0]. innerHTML = '';
+    }
+};
+
+let observerPlasticGoal = new IntersectionObserver(callbackPlasticGoal,{
+    threshold: 0.4
+});
+
+observerPlasticGoal.observe(target_plastic_goal);
+
+
+// Regulate fishing page loading function
+
+let target_action_overfishing = document.querySelector('#action_regulate_fishing');
+
+target_action_overfishing.style.cssText = "background-image: url('./imgs/overfishing-01.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
+let callbackActionOverfishing = function(entryActionOverfishing)
+{ 
+    if(entryActionOverfishing[0].intersectionRatio > 0.4 )
+    {
+
+        target_action_overfishing.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Regulate Fishing','Decrease the amount of unsustainable fishing','1.5s','1s');
+
+        target_action_overfishing.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('','','','800ms','800ms');
+
+    }
+    else
+    {
+        target_action_overfishing.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_action_overfishing.getElementsByClassName('bottom_div')[0]. innerHTML = '';
+    }
+};
+
+let observerActionOverfishing = new IntersectionObserver(callbackActionOverfishing,{
+    threshold: 0.4
+});
+
+observerActionOverfishing.observe(target_action_overfishing);
+
+// Regulate fishing goal page loading function
+
+let target_fishing_goal = document.querySelector('#action_fishing_goal');
+
+target_fishing_goal.style.cssText = "background-image: url('./imgs/regulatefishing.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
+let callbackFishingGoal = function(entryFishingGoal)
+{ 
+    if(entryFishingGoal[0].intersectionRatio > 0.4 )
+    {
+
+        target_fishing_goal.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Sustainable Fishing','Support sustainable fishing practices','1.5s','1s');
+
+        target_fishing_goal.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('','','','800ms','800ms');
+
+    }
+    else
+    {
+        target_fishing_goal.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_fishing_goal.getElementsByClassName('bottom_div')[0]. innerHTML = '';
+    }
+};
+
+let observerFishingGoal = new IntersectionObserver(callbackFishingGoal,{
+    threshold: 0.4
+});
+
+observerFishingGoal.observe(target_fishing_goal);
+
+
+// Increase protection zone page loading function
+
+let target_action_protect = document.querySelector('#protection_zone');
+
+let callbackActionProtect = function(entryActionProtect)
+{ 
+    if(entryActionProtect[0].intersectionRatio > 0.4 )
+    {
+
+        target_action_protect.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','2% +','increase protection areas','1.5s','1s');
+
+        target_action_protect.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/mpa.svg','Support Additional MPA','','800ms','800ms');
+
+    }
+    else
+    {
+        target_action_protect.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_action_protect.getElementsByClassName('bottom_div')[0]. innerHTML = '';
+    }
+};
+
+let observerActionProtect = new IntersectionObserver(callbackActionProtect,{
+    threshold: 0.4
+});
+
+observerActionProtect.observe(target_action_protect);
+
+
+// Protection zone goal page loading function
+
+let target_zone_goal = document.querySelector('#protection_zone_goal');
+
+let callbackZoneGoal = function(entryZOneGoal)
+{ 
+    if(entryZOneGoal[0].intersectionRatio > 0.4 )
+    {
+
+        target_zone_goal.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','20% Global Protection','','1.5s','1s');
+
+        target_zone_goal.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('./imgs/mpa.svg','','By increasing marine protection areas we can help preserve the marine life that lives within the waters','800ms','800ms');
+
+    }
+    else
+    {
+        target_zone_goal.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_zone_goal.getElementsByClassName('bottom_div')[0]. innerHTML = '';
+    }
+};
+
+let observerZoneGoal = new IntersectionObserver(callbackZoneGoal,{
+    threshold: 0.4
+});
+
+observerZoneGoal.observe(target_zone_goal);
+
+
+//End page loading function
+
+let target_outro = document.querySelector('#take_action_page');
+
+target_outro.style.cssText = "background-image: url('./imgs/ocean_background_2.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
+let callbackOutro = function(entryOutro)
+{ 
+    if(entryOutro[0].intersectionRatio > 0.4 )
+    {
+
+        target_outro.innerHTML = outro('', 'With knowledge comes the power to make a difference', 'Let\'s take action to', 'Protect our Ocean','1s','1s');
+
+    }
+    else
+    {
+        target_outro.innerHTML = '';
+    }
+};
+
+let observerOutro = new IntersectionObserver(callbackOutro,{
+    threshold: 0.4
+});
+
+observerOutro.observe(target_outro);
+

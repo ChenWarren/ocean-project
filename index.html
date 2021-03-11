@@ -80,25 +80,51 @@
 
         <div class="ocean_action">
 
-            <section class="center ocean_bg_pollut" id="action_intro"></section>
 
-            <section class="sky_bg_pollut" id="action_climate"></section>
+            <section class="center" id="action_intro"></section>
 
-            <section class="sky_bg_normal" id="action_climate_goal"></section>
+            <section class="center" id="action_climate">
+                <div class="sky center sky_bg_pollut"></div>
+                <div class="sea_level ocean_bg_pollut"></div>
+            </section>
 
-            <section class="ocean_bg_pollut" id="action_plastic"></section>
+            <section class="center" id="action_climate_goal">
+                <div class="sky center sky_bg_normal"></div>
+                <div class="sea_level ocean_bg_level"></div>
+            </section>
 
-            <section class="ocean_bg_normal" id="action_plastic_goal"></section>
+            <section class="ocean_bg_pollut center" id="action_plastic">
+                <div class="top_div center"></div>
+                <div class="bottom_div"></div>
+            </section>
 
-            <section class="sky_bg_pollut" id="action_regulate_fishing"></section>
+            <section class="ocean_bg_normal center" id="action_plastic_goal">
+                <div class="top_div center"></div>
+                <div class="bottom_div"></div>
+            </section>
 
-            <section class="sky_bg_normal" id="action_fishing_goal"></section>
+            <section class="sky_bg_pollut center" id="action_regulate_fishing">
+                <div class="top_div center "></div>
+                <div class="bottom_div"></div>
+            </section>
 
-            <section class="ocean_bg_pollut" id="protection_zone"></section>
+            <section class="sky_bg_normal center" id="action_fishing_goal">
+                <div class="top_div center "></div>
+                <div class="bottom_div"></div>
+            </section>
 
-            <section class="ocean_bg_normal" id="protection_zone_goal"></section>
+            <section class="ocean_bg_pollut center" id="protection_zone">
+                <div class="top_div center"></div>
+                <div class="bottom_div"></div>
+            </section>
 
-            <section class="ocean_bg_normal" id="end_pg"></section>
+            <section class="ocean_bg_normal center" id="protection_zone_goal">
+                <div class="top_div center"></div>
+                <div class="bottom_div"></div>
+            </section>
+
+            <section class="center ocean_bg_normal" id="take_action_page"></section>
+            
 
         </div>
 
@@ -106,12 +132,15 @@
     </main>
 
     <!-- <script src="./js/animate.js"></script> -->
+    <script src="./comps/button/index.js"></script>
     <script src="./comps/category/index.js"></script>
     <script src="./comps/menu/index.js"></script>
     <script src="./comps/menubar/index.js"></script>
-    <script src="./comps/windowClose/index.js"></script>
     <script src="./comps/webname/index.js"></script>
+    <script src="./comps/windowClose/index.js"></script>
     <script src="./comps/intro_title/index.js"></script>
+    <script src="./comps/outro_title/index.js"></script>
+    <script src="./comps/removableobject/index.js"></script>
     <script src="./js/comps.js"></script>
 </body>
 </html>
