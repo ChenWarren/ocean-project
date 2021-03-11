@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    margin: 10px;
+    color: #FFF;
+}
+
+body {
+    max-width: 500px;
+    min-width: 280px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.frame {  
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    /* scroll-behavior: smooth; */
+    /* scroll-snap-type: y; */
+}
+
+.landing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu_expan {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(11, 78, 138, 0.95);
+    z-index: 2;
+}
+
+section {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    /* scroll-snap-align: center; */
+    position: relative;
+    color: #FFF;
+}
+
+.center {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+}
+
+.navbar ul {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+
+.sea_level {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    color: #F1E033;
+    justify-content: center;
+}
+
+.sky {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    background-image: url(../imgs/cloud-01.svg);
+    background-position: center;
+}
+
+
+
+.sky_bg_normal {
+    background-color: #94E0F1;
+}
+
+.sky_bg_pollut {
+    background-color: #B4D5DD;
+}
+
+.ocean_bg_level {
+    background: linear-gradient(180deg, rgba(25, 149, 201, 0.79) 0%, #1995C9 41.15%, #116DA5 100%);
+}
+
+.ocean_bg_food {
+    background-color: #20BEAD;
+}
+
+.ocean_bg_normal {
+    background: linear-gradient(180deg, rgba(25, 149, 201, 0.17) 0%, #1995C9 34.38%, #0B4E8A 99.48%);
+}
+
+/* .ocean_imp_bg {
+    background-image: url('../imgs/ocean_background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} */
+
+.ocean_bg_pollut {
+    background: linear-gradient(180deg, rgba(123, 172, 192, 0.79) 0%, #649AB0 41.15%, #486B81 100%);
+}
+
+@keyframes leftIn {
+    0% {left: -1000px;}
+    100% {left: 0;}
+    
+}
+
+@keyframes rightIn {
+    0% {right: -1000px;}
+    100% {right: 0;}
+    
+}
+
+@keyframes topIn {
+    0% {top: -1000px;}
+    100% {top: 0;}
+    
+}
