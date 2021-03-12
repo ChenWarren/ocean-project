@@ -40,7 +40,7 @@ body {
     top: 0px;
     left: -100%;
     width: 280px;
-    height: 50vh;
+    height: 500px;
     background-color: rgba(11, 78, 138, 0.95);
     z-index: 2;
 }
