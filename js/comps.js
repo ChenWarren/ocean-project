@@ -640,3 +640,94 @@ let observerOutro = new IntersectionObserver(callbackOutro,{
 
 observerOutro.observe(target_outro);
 
+
+
+
+
+// Polution from ships loading function
+
+let target_ship_polution = document.querySelector('#ship_polution');
+
+target_ship_polution.style.cssText = "background-image: url('./imgs/ocean_threats.jpg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
+let callbackShipPolution = function(entryShipPolution)
+{ 
+    if(entryShipPolution[0].intersectionRatio > 0.4 )
+    {
+
+        target_ship_polution.getElementsByClassName('top_div')[0]. innerHTML = introTitle('./imgs/fishing_boat1.svg','Waste Pollution from Ships','Apart from other pollutants such as oil and gas, the waste and garbage generated on board ships poses a significant threat to the marine ecosystem','1.5s','1s');
+
+        target_ship_polution.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('','','','800ms','800ms');
+
+    }
+    else
+    {
+        target_ship_polution.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_ship_polution.getElementsByClassName('bottom_div')[0]. innerHTML = '';
+    }
+};
+
+let observerShipPolution = new IntersectionObserver(callbackShipPolution,{
+    threshold: 0.4
+});
+
+observerShipPolution.observe(target_ship_polution);
+
+// Explore the ocean page loading function
+
+let target_explore_ocean = document.querySelector('#explore_ocean');
+
+target_explore_ocean.style.cssText = "background-image: url('./imgs/diving.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
+let callbackExploreOcean = function(entryExploreOcean)
+{ 
+    if(entryExploreOcean[0].intersectionRatio > 0.4 )
+    {
+
+        target_explore_ocean.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Explore the Oceans','Get outdoors to have a look at the waters that surround you','1.5s','1s');
+
+        target_explore_ocean.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('','“People protect what they love.”','','800ms','800ms');
+
+    }
+    else
+    {
+        target_explore_ocean.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_explore_ocean.getElementsByClassName('bottom_div')[0]. innerHTML = '';
+    }
+};
+
+let observerExploreOcean = new IntersectionObserver(callbackExploreOcean,{
+    threshold: 0.4
+});
+
+observerExploreOcean.observe(target_explore_ocean);
+
+
+// Educate yourself page loading function
+
+let target_educate_yourself = document.querySelector('#educate_yourself');
+
+target_educate_yourself.style.cssText = "background-image: url('./imgs/marinelife.svg');background-repeat: no-repeat;background-size: cover;background-position: center;"
+
+let callbackEducateYourself = function(entryEducateYourself)
+{ 
+    if(entryEducateYourself[0].intersectionRatio > 0.4 )
+    {
+
+        target_educate_yourself.getElementsByClassName('top_div')[0]. innerHTML = introTitle('','Educate Yourself About Oceans and Marine Life','','1.5s','1s');
+
+        target_educate_yourself.getElementsByClassName('bottom_div')[0]. innerHTML = introTitle('','','The ocean and its inhabitants are central to all life on Earth. The more you learn about the problems that it is facing, the more you will want to help protect it','800ms','800ms');
+
+    }
+    else
+    {
+        target_educate_yourself.getElementsByClassName('top_div')[0].innerHTML = '';
+        target_educate_yourself.getElementsByClassName('bottom_div')[0]. innerHTML = '';
+    }
+};
+
+let observerEducateYourself = new IntersectionObserver(callbackEducateYourself,{
+    threshold: 0.4
+});
+
+observerEducateYourself.observe(target_educate_yourself);
